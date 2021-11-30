@@ -8,8 +8,10 @@ body{
     width: 70vw;
     margin: auto;
 }
-.test{
-    width: 100%;
-    background-color: black;
-    height: 100px;
+.header-menu-nav ul li{
+    display: inline-block;
+    text-decoration: none;
+}
+.header-menu-nav ul li a{
+    text-decoration: none;
 }
