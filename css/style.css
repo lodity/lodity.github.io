@@ -15,3 +15,61 @@ body{
 .header-menu-nav ul li a{
     text-decoration: none;
 }
+.haeder-menu{
+    display: inline;
+}
+.header-menu-nav{
+    float: left;
+}
+.header-menu-inf{
+    float: right;
+}
+header{
+    height: 100vh;
+}
+
+
+.btn-call{
+    padding: 10px;
+    border: 2px solid rgba(228,228,228,.5);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    transition: .6s;
+  } 
+.btn-call:hover {
+    background-color: #EA3A2C;
+  }
+
+
+
+
+  .email{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 1.5px;
+}
+.row {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin: 40px;
+}
+.copy {
+    margin: 4px 0 0 0;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    color: #a5a5a5;
+}
+.politic {
+    font-size: 12px;
+    color: #8f8f90;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+}
+.fa-info-circle:before {
+    content: "\f05a";
+    color: #8f8f90;
+}
