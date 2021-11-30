@@ -1,6 +1,5 @@
 body{
     margin: 0;
-    background: black;
 }
 .wrapper{
     width: 100%;
@@ -9,27 +8,10 @@ body{
     width: 70vw;
     margin: auto;
 }
-.test{
-    width: 100%;
-    background-color: black;
-    height: 100px;
-}
-
-/*footer*/
-
-.phone{
+.header-menu-nav ul li{
+    display: inline-block;
     text-decoration: none;
-    text-decoration-thickness: initial;
-    text-decoration-style: initial;
-    text-decoration-color: initial;
-    font-size: 18px;
-    color: white;
-    letter-spacing: 1.5px;
 }
-.fa-phone-alt:before {
-    rotate: 270;
-    content: "\f879";
-}
-.fa-map-marker-alt:before {
-    content: "\f3c5";
+.header-menu-nav ul li a{
+    text-decoration: none;
 }
