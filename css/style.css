@@ -18,17 +18,19 @@ body{
 .haeder-menu{
     display: inline;
 }
-.header-menu-nav{
-    float: left;
-}
-.header-menu-inf{
-    float: right;
-}
 header{
     height: 100vh;
+    background-image: url(../img/headerbg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
-
-
+#logo-header{
+  margin: auto;
+  text-align: center;
+}
+.header-info-block{
+  color: rgb(173, 173, 173);
+}
 .btn-call{
     padding: 10px;
     border: 2px solid rgba(228,228,228,.5);
@@ -118,10 +120,10 @@ header{
           justify-content: center;
 }
 .slider__nav {
-  width: 12px;
+  width: 40px;
   height: 12px;
-  margin: 2rem 12px;
-  border-radius: 50%;
+  margin: 0.5rem 5px;
+  border-radius: 10%;
   z-index: 10;
   outline: 6px solid #ccc;
   outline-offset: -6px;
