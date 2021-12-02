@@ -16,7 +16,25 @@ body{
     text-decoration: none;
 }
 .haeder-menu{
-    display: inline;
+    display: flex;
+    flex-flow: row wrap;
+}
+.header-menu-inf{
+  order: 999;
+  margin-left: auto;
+  margin-top: 70px;
+  text-align: center;
+}
+.fa-phone-alt:before {
+  color: white;
+}
+.phone{
+  color: white;
+  text-decoration: none;
+  font-size: 1.6vw;
+}
+.work-time{
+  font-size: 1.2vw;
 }
 header{
     height: 100vh;
@@ -27,6 +45,7 @@ header{
 #logo-header{
   margin: auto;
   text-align: center;
+  margin-top: 115px;
 }
 .header-info-block{
   color: rgb(173, 173, 173);
@@ -35,7 +54,7 @@ header{
     padding: 10px;
     border: 2px solid rgba(228,228,228,.5);
     color: rgb(255, 255, 255);
-    font-size: 20px;
+    font-size: 17px;
     letter-spacing: 1.2px;
     text-decoration: none;
     transition: .6s;
@@ -43,7 +62,15 @@ header{
 .btn-call:hover {
     background-color: #EA3A2C;
   }
-
+  .header-info{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 130px;
+  }
+  .btn-products{
+    text-align: center;
+    margin-top: 85px;
+  }
 
 
 
