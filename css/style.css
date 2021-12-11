@@ -162,7 +162,6 @@ header{
   }
 
 
-
   .email{
     text-decoration: none;
     font-size: 18px;
@@ -194,155 +193,115 @@ header{
 .fon{
     background: gray;
     min-height: 600px;
-
-    width: 100%;
+    padding-left: 35%;
+    width: 96%;
     margin-bottom: 500px;
     padding: 2%;
 }
+/*------------------Ползунок---------*/
 
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f9f9fd;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, lightgray, rgb(170, 99, 99));
+}
 /*-----карусель------*/
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
-*, *:before, *:after {
-  box-sizing: border-box;
+img {
+  width: 100%;
 }
 
-
-.slidersimage{
-    width: 300px;
-    height: 300px;
+.sim-slider {
+  max-width: 30%;
+  min-width: 320px;
+  min-height: 500px;
+  margin: 20px;
+  padding: 30px 50px;
+  background-color: lightgray;
+  border-radius: 30px;
 }
-.slider {
-    width: 300px;
 
-  height: 100%;
-  min-height: 300px;
+/* General styles */
+.sim-slider {
   position: relative;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
-.slider__nav {
-  width: 40px;
-  height: 12px;
-  margin: 0.5rem 5px;
-  border-radius: 10%;
-  z-index: 10;
-  outline: 6px solid #ccc;
-  outline-offset: -6px;
-  box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
-  cursor: pointer;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+
+.sim-slider-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
 }
-.slider__nav:checked {
-  -webkit-animation: check 0.4s linear forwards;
-          animation: check 0.4s linear forwards;
-}
-.slider__nav:checked:nth-of-type(1) ~ .slider__inner {
-  left: -11%;
-}
-.slider__nav:checked:nth-of-type(2) ~ .slider__inner {
-  left: -132%;
-}
-.slider__nav:checked:nth-of-type(3) ~ .slider__inner {
-  left: -253%;
-}
-.slider__nav:checked:nth-of-type(4) ~ .slider__inner {
-  left: -375%;
-}
-.slider__inner {
+
+.sim-slider-element {
+  width: 100%;
+  transition: opacity 1s ease-in;
+  opacity: 0;
   position: absolute;
-  top: 0;
+  z-index: 2;
   left: 0;
-  width: 400%;
-  height: 100%;
-  -webkit-transition: left 0.4s;
-  transition: left 0.4s;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  top: 0;
+  display: block;
 }
-.slider__contents {
-  height: 100%;
-  padding: 2rem;
+
+/* Navigation item styles */
+div.sim-slider-arrow-left,
+div.sim-slider-arrow-right {
+  width: 22px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0.6;
+  z-index: 4;
+}
+
+div.sim-slider-arrow-left {
+  left: 10px;
+  top: 40%;
+  display: block;
+  background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-left.png") no-repeat;
+}
+
+div.sim-slider-arrow-right {
+  right: 10px;
+  top: 40%;
+  display: block;
+  background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-right.png") no-repeat;
+}
+
+div.sim-slider-arrow-left:hover {
+  opacity: 1.0;
+}
+
+div.sim-slider-arrow-right:hover {
+  opacity: 1.0;
+}
+
+div.sim-slider-dots {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
   text-align: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-flex-flow: column nowrap;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.slider__image {
-  font-size: 2.7rem;
-      color: #2196F3;
-}
-.slider__caption {
-  font-weight: 500;
-  margin: 2rem 0 1rem;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  text-transform: uppercase;
-}
-.slider__txt {
-  color: #999;
-  margin-bottom: 3rem;
-  max-width: 300px;
 }
 
-@-webkit-keyframes check {
-  50% {
-    outline-color: #333;
-    box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
-  }
-  100% {
-    outline-color: #333;
-    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
-  }
+span.sim-dot {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  padding: 0;
+  display: inline-block;
+  background-color: #BBB;
+  border-radius: 5px;
+  cursor: pointer;
 }
-
-@keyframes check {
-  50% {
-    outline-color: #333;
-    box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
-  }
-  100% {
-    outline-color: #333;
-    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
-  }
-}
-
 /*-----конец-карусели------*/
